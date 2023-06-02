@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+        <!-- Database connection -->
+        <property name="connection.url">jdbc:mysql://localhost:3306/jdbc_hibernate_demo</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">database99</property>
+
+        <property name="hbm2ddl.auto">update</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.show_sql">true</property>
+
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.connection.pool_size">1</property>
+
+        <!-- List of mapping classes -->
+        <mapping class="model.Movie" />
+    </session-factory>
+
+</hibernate-configuration>
